@@ -2,6 +2,7 @@ import ScarcityBanner from "@/components/ScarcityBanner";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ConversionSection from "@/components/ConversionSection";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
@@ -17,7 +18,7 @@ export default function Home() {
       
       <ConversionSection />
       
-      <div id="community" className="py-20" />
+      <Testimonials />
       
       <Footer />
       
