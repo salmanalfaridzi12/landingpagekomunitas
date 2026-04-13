@@ -91,7 +91,7 @@ export default function PivotFeature() {
                 transition={{ delay: 0.2 }}
                 className="text-lg text-silver leading-relaxed"
               >
-                Member VIP mendapatkan akses khusus ke web kalkulator Pivot Point otomatis yang dilengkapi dengan panduan visual chart. Tidak perlu hitung manual, biarkan sistem kami yang mencari titik Support & Resistance terakurat untuk Anda.
+                Akses ke alat hitung Support & Resistance institusional ini diberikan secara otomatis segera setelah Anda bergabung dalam Grup VIP. Tidak tersedia untuk umum, murni dirancang untuk memberikan keunggulan kompetitif bagi member premium kami.
               </motion.p>
             </div>
 
@@ -113,24 +113,6 @@ export default function PivotFeature() {
                   </div>
                 </div>
               ))}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="pt-4"
-            >
-              <a 
-                href="https://hitung-pivot-tradingstars.vercel.app/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-tr from-purple-600 to-blue-600 px-8 py-4 text-lg font-bold text-white shadow-[0_0_30px_rgba(147,51,234,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(147,51,234,0.5)]"
-              >
-                Cek Demo Fitur
-                <ChevronRight size={20} />
-              </a>
             </motion.div>
           </div>
         </div>

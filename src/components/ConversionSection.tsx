@@ -80,6 +80,7 @@ export default function ConversionSection() {
               <FeatureItem text="Sinyal Bot Real-time" included={true} isVip />
               <FeatureItem text="Analisis SMC & VPA" included={true} isVip />
               <FeatureItem text="Grup VIP Eksklusif" included={true} isVip />
+              <FeatureItem text="Akses Web Pivot Analyzer" included={true} isVip />
               <FeatureItem text="Market Deep Dives" included={true} isVip />
               <FeatureItem text="Mentorship Langsung" included={false} />
             </div>
@@ -130,6 +131,7 @@ export default function ConversionSection() {
             <div className="mb-8 space-y-4 relative z-10">
               <FeatureItem text="Semua Alert Bot (SMC/VPA)" included={true} isVip />
               <FeatureItem text="Akses Grup Selamanya" included={true} isVip />
+              <FeatureItem text="Web Pivot Analyzer (Premium)" included={true} isVip />
               <FeatureItem text="Prioritas Konsultasi 1-on-1" included={true} isVip />
               <FeatureItem text="Bonus Strategi Eksklusif" included={true} isVip />
               <FeatureItem text="Risk Management Hub" included={true} isVip />
