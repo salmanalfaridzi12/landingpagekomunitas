@@ -1,121 +1,109 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, Target, BarChart3, ChevronRight } from "lucide-react";
+import { ShieldAlert } from "lucide-react";
 
 export default function PivotFeature() {
-  const features = [
-    {
-      icon: <Zap className="text-purple-400" size={20} />,
-      title: "Otomatis & Real-time",
-      desc: "Hitung titik pivot secara instan tanpa perlu input manual yang rumit."
-    },
-    {
-      icon: <Target className="text-purple-400" size={20} />,
-      title: "Panduan Visual Chart",
-      desc: "Visualisasi garis S/R langsung di dashboard untuk mapping harga yang lebih jelas."
-    },
-    {
-      icon: <BarChart3 className="text-purple-400" size={20} />,
-      title: "Hanya untuk Member VIP",
-      desc: "Alat bantu eksklusif yang dirancang meningkatkan win-rate trading harian Anda."
-    }
+  const screenshots = [
+    { src: "/pivot/pivot1.jpg", title: "Data OHLC & Input" },
+    { src: "/pivot/pivot2.jpg", title: "Pivot Ladder & S/R" },
+    { src: "/pivot/pivot3.jpg", title: "Strength & Market Sentiment" }
   ];
 
   return (
-    <section className="relative py-24 px-6 overflow-hidden">
-      {/* Background Decorative Glow */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 h-[600px] w-[600px] bg-purple-600/10 blur-[150px] rounded-full pointer-events-none" />
+    <section className="relative py-24 px-6 overflow-hidden bg-navy/20">
+      {/* Background Decorative Glows */}
+      <div className="absolute top-0 left-1/4 h-[500px] w-[500px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 h-[500px] w-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Image Side */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+        {/* Header Section */}
+        <div className="mb-20 text-center max-w-3xl mx-auto space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative w-full lg:w-1/2"
+            className="inline-block rounded-full bg-purple-500/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-purple-400 ring-1 ring-purple-500/20"
           >
-            {/* Glow Frame Effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-[2.5rem] blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-            
-            <div className="relative rounded-[2rem] border border-white/10 bg-navy/80 p-2 shadow-[0_0_50px_rgba(147,51,234,0.3)] overflow-hidden">
-              <img 
-                src="/pivot/pivot1.jpg" 
-                alt="Pivot Analyzer Preview" 
-                className="w-full h-auto rounded-[1.5rem] object-cover"
-              />
-              
-              {/* VIP Badge */}
-              <div className="absolute top-6 right-6 z-20">
-                <div className="flex items-center gap-2 rounded-full bg-purple-600 px-4 py-1.5 text-xs font-black uppercase tracking-widest text-white shadow-[0_0_20px_rgba(147,51,234,0.6)] ring-1 ring-white/20">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-                  </span>
-                  VIP EXCLUSIVE
-                </div>
-              </div>
-
-              {/* Glass Overlay on Bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-navy to-transparent opacity-60" />
-            </div>
+            Exclusive VIP Ecosystem
           </motion.div>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-gradient-silver text-4xl font-extrabold tracking-tight md:text-6xl"
+          >
+            TRADING STARS <br />
+            <span className="text-white">Pivot Analyzer Tool</span>
+          </motion.h2>
 
-          {/* Content Side */}
-          <div className="w-full lg:w-1/2 space-y-8">
-            <div className="space-y-4">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="inline-block rounded-full bg-purple-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-purple-400 ring-1 ring-purple-500/20"
-              >
-                Exclusive VIP Tool
-              </motion.div>
-              <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="text-gradient-silver text-4xl font-extrabold tracking-tight md:text-5xl"
-              >
-                Akses Eksklusif: <br />
-                <span className="text-white">TRADING STARS Pivot Analyzer</span>
-              </motion.h2>
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="text-lg text-silver leading-relaxed"
-              >
-                Akses ke alat hitung Support & Resistance institusional ini diberikan secara otomatis segera setelah Anda bergabung dalam Grup VIP. Tidak tersedia untuk umum, murni dirancang untuk memberikan keunggulan kompetitif bagi member premium kami.
-              </motion.p>
-            </div>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-silver"
+          >
+            Dapatkan akses penuh ke ekosistem analisa kami, mulai dari data OHLC, Pivot Ladder, hingga Sentimen Pasar. Dirancang khusus untuk memberikan akurasi maksimal bagi member VIP.
+          </motion.p>
+        </div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+        {/* Trio Grid Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+          {screenshots.map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="grid gap-6"
+              transition={{ delay: idx * 0.1 }}
+              className="relative group"
             >
-              {features.map((f, i) => (
-                <div key={i} className="flex gap-4 group">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-500/10 ring-1 ring-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
-                    {f.icon}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-white">{f.title}</h4>
-                    <p className="text-sm text-silver">{f.desc}</p>
+              {/* Neon Purple Glow Effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-500 rounded-3xl blur opacity-20 group-hover:opacity-60 transition duration-500"></div>
+              
+              <div className="relative rounded-2xl border border-white/10 bg-navy/80 p-1.5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
+                {/* VIP Badge */}
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="flex items-center gap-1.5 rounded-full bg-purple-600/90 backdrop-blur-md px-3 py-1 text-[8px] font-black uppercase tracking-widest text-white shadow-lg ring-1 ring-white/20 animate-pulse">
+                    <ShieldAlert size={8} /> VIP ONLY
                   </div>
                 </div>
-              ))}
+
+                <div className="overflow-hidden rounded-xl">
+                  <img 
+                    src={item.src} 
+                    alt={item.title} 
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+
+                {/* Subtitle Overlay */}
+                <div className="mt-3 px-2 pb-2">
+                  <h4 className="text-xs font-bold text-silver/80 group-hover:text-purple-400 transition-colors uppercase tracking-widest text-center">
+                    {item.title}
+                  </h4>
+                </div>
+              </div>
             </motion.div>
-          </div>
+          ))}
         </div>
+
+        {/* Footnote */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-16 text-center"
+        >
+          <p className="text-sm text-silver/40 flex items-center justify-center gap-2">
+            <span className="h-1 w-1 rounded-full bg-purple-500" />
+            Integrasi otomatis tersedia setelah aktivasi paket VIP
+            <span className="h-1 w-1 rounded-full bg-purple-500" />
+          </p>
+        </motion.div>
       </div>
     </section>
   );
