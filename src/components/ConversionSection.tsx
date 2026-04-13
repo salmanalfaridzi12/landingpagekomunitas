@@ -13,7 +13,8 @@ const FeatureItem = ({ text, included, isVip }: { text: string; included: boolea
 );
 
 export default function ConversionSection() {
-  const telegramUrl = process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/TRADINGSTARSVIP?text=Halo%20Admin%20Trading%20Stars,%20saya%20mau%20ambil%20slot%20VIP%20Fast%20Track%20sekarang.";
+  const telegramMonthly = "https://t.me/TRADINGSTARSVIP?text=Halo%20Admin%20TRADING%20STARS!%20Saya%20sudah%20baca%20penjelasannya%20di%20web%20dan%20tertarik%20buat%20join%20Grup%20VIP%20via%20jalur%20BULANAN.%20Tolong%20info%20cara%20pembayarannya%20ya,%20mau%20langsung%20gas%20pantau%20sinyal%20hari%20ini!%20%F0%9F%93%88";
+  const telegramLifetime = "https://t.me/TRADINGSTARSVIP?text=Halo%20Admin!%20Saya%20pilih%20paket%20VIP%20LIFETIME%20buat%20dapet%20akses%20selamanya.%20Gak%20mau%20ribet%20perpanjang%20tiap%20bulan,%20mau%20fokus%20profit%20bareng%20komunitas%20aja.%20Tolong%20amankan%20slot%20saya%20ya!%20%F0%9F%94%A5%E2%AD%90";
 
   return (
     <section id="vip" className="relative py-24 px-6 overflow-hidden">
@@ -93,7 +94,7 @@ export default function ConversionSection() {
               </div>
 
               <motion.a
-                href={telegramUrl}
+                href={telegramMonthly}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -150,7 +151,7 @@ export default function ConversionSection() {
               </div>
 
               <motion.a
-                href={telegramUrl}
+                href={telegramLifetime}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
