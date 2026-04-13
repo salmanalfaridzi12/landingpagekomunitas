@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { User } from "lucide-react";
+import { Send } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -27,14 +27,17 @@ export default function Navbar() {
             ))}
           </div>
 
-          <motion.button
+          <motion.a
+            href={process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/TRADINGSTARSVIP?text=Halo%20Admin%20Trading%20Stars,%20saya%20mau%20ambil%20slot%20VIP%20Fast%20Track%20sekarang."}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20"
           >
-            <User size={16} />
-            Login
-          </motion.button>
+            <Send size={16} className="text-cyan" />
+            Hubungi Admin
+          </motion.a>
         </div>
       </div>
     </nav>
