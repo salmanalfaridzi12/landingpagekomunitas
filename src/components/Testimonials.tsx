@@ -42,11 +42,9 @@ const TestimonialCard = ({
       </div>
       
       <div className="relative flex-grow overflow-hidden rounded-2xl border border-white/5 bg-navy/40">
-        <Image
+        <img
           src={src}
           alt={title}
-          width={800}
-          height={1200}
           className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 ${isAlpha ? "" : "opacity-90"}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-60" />
