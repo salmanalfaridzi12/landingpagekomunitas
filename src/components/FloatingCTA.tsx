@@ -32,7 +32,7 @@ export default function FloatingCTA() {
             rel="noopener noreferrer"
             className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-gold to-yellow-500 py-4 text-lg font-bold text-navy shadow-[0_-4px_20px_rgba(251,191,36,0.3)]"
           >
-            <Zap size={20} /> Skip the Queue - Get VIP
+            <Zap size={20} /> Lewati Antrean - Ambil VIP
           </a>
         </motion.div>
       )}

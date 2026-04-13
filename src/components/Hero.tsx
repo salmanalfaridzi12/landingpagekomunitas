@@ -52,7 +52,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-gradient-silver text-5xl font-extrabold tracking-tighter md:text-7xl lg:text-8xl"
         >
-          Let Your Profits <br /> Defy Gravity
+          Biarkan Profit Anda <br /> Melawan Gravitasi
         </motion.h1>
         
         <motion.p
@@ -61,8 +61,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-6 text-lg text-silver md:text-xl"
         >
-          Master the markets with institutional grade analysis and <br className="hidden md:block" />
-          real-time bot alerts designed for the top 1%.
+          Kuasai pasar dengan analisis kelas institusional dan <br className="hidden md:block" />
+          alert bot real-time yang dirancang untuk trader elit 1%.
         </motion.p>
         
         <motion.div
@@ -79,7 +79,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-tr from-gold to-yellow-500 px-8 py-5 text-lg font-bold text-navy shadow-[0_0_20px_rgba(251,191,36,0.4)] transition-all hover:shadow-[0_0_30px_rgba(251,191,36,0.6)]"
           >
-            Join VIP Fast Track
+            Gabung VIP Fast Track
             <TrendingUp size={20} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </motion.a>
         </motion.div>
@@ -88,7 +88,7 @@ export default function Hero() {
       {/* Antigravity Floating Elements */}
       <div className="mt-20 relative w-full max-w-5xl h-[400px] hidden md:block">
         <FloatingCard 
-          title="SMC ALERTS" 
+          title="ALERT SMC" 
           icon={TrendingUp} 
           delay={0} 
           duration={5} 
