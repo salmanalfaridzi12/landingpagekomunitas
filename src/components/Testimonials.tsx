@@ -1,4 +1,5 @@
 "use client";
+// Version: 1.0.2 - Force rebuild for images
 
 import { motion } from "framer-motion";
 import Image from "next/image";
