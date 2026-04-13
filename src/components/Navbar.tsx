@@ -7,8 +7,12 @@ export default function Navbar() {
   return (
     <nav className="sticky top-11 z-40 w-full px-6 py-4">
       <div className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl glass px-6 py-3">
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-gold to-cyan shadow-[0_0_15px_rgba(34,211,238,0.5)]" />
+        <div className="flex items-center gap-3">
+          <img 
+            src="/logo.png" 
+            alt="TRADING STARS Logo" 
+            className="h-10 w-auto object-contain"
+          />
           <span className="text-xl font-bold tracking-tighter text-white">
             TRADING STARS
           </span>

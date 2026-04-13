@@ -6,8 +6,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="col-span-2">
-            <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-full bg-gradient-to-tr from-gold to-cyan" />
+            <div className="flex items-center gap-3">
+              <img 
+                src="/logo.png" 
+                alt="TRADING STARS Logo" 
+                className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+              />
               <span className="text-lg font-bold tracking-tighter text-white">
                 TRADING STARS
               </span>
