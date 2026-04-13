@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #050a15;
+  --color-obsidian: #020617;
+  --color-gold: #fbbf24;
+  --color-gold-glow: #fbbf2440;
+  --color-cyan: #22d3ee;
+  --color-cyan-glow: #22d3ee40;
+  --color-silver: #94a3b8;
+  --color-telegram: #229ED9;
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-border-beam: border-beam 4s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes border-beam {
+  0%, 100% { clip-path: inset(0 0 95% 0); }
+  25% { clip-path: inset(0 0 0 95%); }
+  50% { clip-path: inset(95% 0 0 0); }
+  75% { clip-path: inset(0 95% 0 0); }
+}
+
+:root {
+  --background: #050a15;
+  --foreground: #ffffff;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  overflow-x: hidden;
+  font-display: swap; /* Fix CLS */
+}
+
+/* Glassmorphism utility - Optimized backdrop blur */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-premium {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-gold {
+  background: rgba(251, 191, 36, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.glass-cyan {
+  background: rgba(34, 211, 238, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+/* Text Gradients */
+.text-gradient-silver {
+  background: linear-gradient(to bottom, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Optimized Mouse Glow Effect */
+.mouse-glow {
+  background: radial-gradient(
+    500px circle at var(--mouse-x) var(--mouse-y),
+    rgba(34, 211, 238, 0.06),
+    transparent 80%
+  );
+  will-change: transform; /* Hint to browser for performance */
+}
+
+/* Scarcity Banner Glow - Enhanced visibility */
+@keyframes glow-urgent {
+  0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.3); }
+  50% { box-shadow: 0 0 24px rgba(251, 191, 36, 0.6); }
+}
+
+.animate-glow-urgent {
+  animation: glow-urgent 1.5s ease-in-out infinite;
+}
