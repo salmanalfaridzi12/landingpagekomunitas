@@ -2,6 +2,7 @@ import ScarcityBanner from "@/components/ScarcityBanner";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ConversionSection from "@/components/ConversionSection";
+import PivotFeature from "@/components/PivotFeature";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -17,6 +18,8 @@ export default function Home() {
       <div id="services" className="py-20" />
       
       <ConversionSection />
+      
+      <PivotFeature />
       
       <Testimonials />
       
